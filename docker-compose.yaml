@@ -1,0 +1,30 @@
+services:
+  qgis-app:
+    build:
+      context: .
+      args:
+        - http_proxy=${HTTP_PROXY}
+        - https_proxy=${HTTPS_PROXY}
+    container_name: qgis_yearly_task
+    volumes:
+      - ./data:/app/data
+      - ./scripts:/app/scripts
+    environment:
+      # Database Connection
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_PORT=${DB_PORT}
+      
+      # Proxy Settings
+      - HTTP_PROXY=${HTTP_PROXY}
+      - HTTPS_PROXY=${HTTPS_PROXY}
+      - NO_PROXY=${NO_PROXY}
+
+      # Python path
+      - PYTHONPATH=/usr/share/qgis/python
+      # This prevents some common GUI errors in headless mode
+      - QT_QPA_PLATFORM=offscreen
+
+    network_mode: "bridge"

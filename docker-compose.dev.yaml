@@ -1,0 +1,8 @@
+services:
+  qgis-app:
+    volumes:
+      - .:/app  # Mounts your whole local folder into the container
+    # Keeps the container alive so you can "enter" it whenever you want
+    tty: true 
+    stdin_open: true
+    command: tail -f /dev/null

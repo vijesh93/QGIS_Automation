@@ -1,0 +1,9 @@
+# Foders
+__pycache__/
+data/
+
+# Environment file
+.env
+
+# SQL Scripts
+*.sql

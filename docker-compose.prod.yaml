@@ -1,0 +1,8 @@
+services:
+  qgis-app:
+    # No volumes here! We use the code "baked" into the image.
+    # No command here! We use the CMD from the Dockerfile.
+    deploy:
+      resources:
+        limits:
+          memory: 2G

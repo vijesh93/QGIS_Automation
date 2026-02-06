@@ -1,0 +1,11 @@
+# Database driver
+psycopg2-binary
+
+# Environment variable loader (optional but helpful)
+python-dotenv
+
+# For the connection tester
+requests
+
+# Computations
+pandas
