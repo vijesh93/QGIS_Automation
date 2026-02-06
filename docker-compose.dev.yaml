@@ -2,6 +2,8 @@ services:
   qgis-app:
     volumes:
       - .:/app  # Mounts your whole local folder into the container
+    ports:
+      - "5678:5678"  # The Debugging Port
     # Keeps the container alive so you can "enter" it whenever you want
     tty: true 
     stdin_open: true

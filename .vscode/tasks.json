@@ -1,0 +1,12 @@
+// To avoid typing the long python -m debugpy command every time
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Debugger in Container",
+            "type": "shell",
+            "command": "docker exec -d qgis_yearly_task /opt/venv/bin/python3 -m debugpy --listen 0.0.0.0:5678 --wait-for-client ${relativeFile}",
+            "problemMatcher": []
+        }
+    ]
+}

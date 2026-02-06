@@ -9,3 +9,6 @@ requests
 
 # Computations
 pandas
+
+# Python debugger
+debugpy
