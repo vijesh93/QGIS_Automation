@@ -12,3 +12,6 @@ pandas
 
 # Python debugger
 debugpy
+
+# Pretty printing library
+tabulate
