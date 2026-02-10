@@ -1,5 +1,7 @@
 services:
   qgis-app:
+    # Ensure the built image gets a stable name/tag instead of an anonymous hash
+    image: ${IMAGE_NAME:-qgis-automation/qgis-app}:${IMAGE_TAG:-prod}
     # No volumes here! We use the code "baked" into the image.
     # No command here! We use the CMD from the Dockerfile.
     deploy:
