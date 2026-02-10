@@ -36,4 +36,4 @@ ENV PYTHONPATH="/usr/share/qgis/python:$PYTHONPATH"
 COPY . /app
 
 # 2. Set the default command (Production default)
-CMD ["python3", "scripts/automate_qgis.py"]
+CMD ["python3", "test/test_db_connection.py"]

@@ -1,5 +1,7 @@
 services:
   qgis-app:
+    # Predictable image name/tag used by both dev and prod overrides
+    image: ${IMAGE_NAME:-qgis-automation/qgis-app}:${IMAGE_TAG:-latest}
     build:
       context: .
       args:
